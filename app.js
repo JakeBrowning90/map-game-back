@@ -1,3 +1,4 @@
+/* global require */
 require('dotenv').config();
 const createError = require('http-errors');
 const cors = require('cors');
@@ -22,7 +23,7 @@ const mongoDB = process.env.MONGODB_URI;
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(mongoDB);
-  console.log("Connected!")
+  console.log("Connected!");
 }
 
 // view engine setup

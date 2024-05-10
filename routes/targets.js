@@ -1,9 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const targetController = require("../controllers/targetController");
 
-/* GET targets listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// CREATE Target
+router.post('/', targetController.target_create);
+
+// READ Target
+router.get('/', targetController.target_read);
+
+// UPDATE Target
+router.put('/', targetController.target_update);
+
+// DELETE Target
+router.delete('/', targetController.target_delete);
 
 module.exports = router;
