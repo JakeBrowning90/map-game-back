@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const TargetSchema = new Schema(
   {
     name: { type: String },
-    location: { type: Array },
+    location: { type: Array, default: undefined },
   },
   { toJSON: { virtuals: true } }
 );
