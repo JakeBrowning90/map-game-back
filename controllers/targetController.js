@@ -5,7 +5,7 @@ const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
 exports.target_read_all = asyncHandler(async (req, res, next) => {
-  const allTargets = await User.find().sort({ name: 1 }).exec();
+  const allTargets = await Target.find().sort({ name: 1 }).exec();
   res.json(allTargets);
 });
 
