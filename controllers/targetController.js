@@ -16,6 +16,7 @@ exports.target_create = asyncHandler(async (req, res, next) => {
   const target = new Target({
     name: req.body.name,
     location: req.body.location,
+    trivia: req.body.trivia,
   });
 
   if (!errors.isEmpty()) {
@@ -35,6 +36,7 @@ exports.target_update = asyncHandler(async (req, res, next) => {
   const target = new Target({
     name: req.body.name,
     location: req.body.location,
+    trivia: req.body.trivia,
     _id: req.params.id,
   });
 

@@ -5,6 +5,7 @@ const TargetSchema = new Schema(
   {
     name: { type: String },
     location: { type: Array, default: undefined },
+    trivia: { type: Array, default: undefined },
   },
   { toJSON: { virtuals: true } }
 );
